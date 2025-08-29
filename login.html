@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechBloom - Login</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      width: 320px;
+      text-align: center;
+    }
+
+    .login-container h1 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .login-container h1 span {
+      color: #ff6600; /* Orange for Bloom */
+    }
+
+    .input-box {
+      position: relative;
+      margin: 15px 0;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px 40px 12px 15px;
+      border: none;
+      border-radius: 25px;
+      background: #ddd;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .input-box i {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #555;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 25px;
+      background: #ff6600;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #e65c00;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Tech<span>Bloom</span></h1>
+    <form onsubmit="return validateForm()">
+      <div class="input-box">
+        <input type="text" id="username" placeholder="Username">
+        <i class="fa fa-user"></i>
+      </div>
+      <div class="input-box">
+        <input type="password" id="password" placeholder="Password">
+        <i class="fa fa-lock"></i>
+      </div>
+      <button type="submit">Sign in</button>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      let user = document.getElementById("username").value;
+      let pass = document.getElementById("password").value;
+      if (user === "" || pass === "") {
+        alert("Please enter Username and Password!");
+        return false;
+      }
+      alert("Welcome to TechBloom 🚀");
+      return true;
+    }
+  </script>
+</body>
+</html>
